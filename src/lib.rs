@@ -22,8 +22,8 @@ pub type Result<T> = std::result::Result<T, TemplateError>;
 /// Reference to a template that can be executed
 #[derive(Debug, Clone)]
 pub struct TemplateRef {
-    template: Template,
-    dependencies: Vec<String>,
+    pub template: Template,
+    pub dependencies: Vec<String>,
 }
 
 impl TemplateRef {
