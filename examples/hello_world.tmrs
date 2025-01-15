@@ -1,0 +1,6 @@
+// A simple template that prints a customizable greeting
+fn main() {
+    let greeting = "@[greeting]@";
+    let name = "@[name]@";
+    println!("{} {}", greeting, name);
+}

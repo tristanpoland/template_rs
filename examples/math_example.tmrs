@@ -1,0 +1,31 @@
+// Template demonstrating numeric operations with configurable types
+//! ```cargo
+//! [dependencies]
+//! num = "0.4"
+//! ```
+
+use num::Complex;
+
+fn perform_calculation<T: std::ops::Add<Output = T> + std::fmt::Display + Copy>(a: T, b: T) -> T {
+    a + b
+}
+
+fn main() {
+    let number_type = "@[number_type]@";
+    let first = @[first_value]@;
+    let second = @[second_value]@;
+
+    match number_type {
+        "complex" => {
+            let result = perform_calculation(
+                Complex::new(first, 0.0),
+                Complex::new(second, 0.0)
+            );
+            println!("Result: {}", result);
+        },
+        _ => {
+            let result = perform_calculation(first, second);
+            println!("Result: {}", result);
+        }
+    }
+}

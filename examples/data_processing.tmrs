@@ -1,0 +1,22 @@
+// Template for processing data with configurable input handling
+//! ```cargo
+//! [dependencies]
+//! serde = { version = "1.0", features = ["derive"] }
+//! serde_json = "1.0"
+//! ```
+
+use serde::{Serialize, Deserialize};
+
+#[derive(Debug, Serialize, Deserialize)]
+struct @[struct_name]@ {
+    @[struct_fields]@
+}
+
+fn main() {
+    let input_data = r#"@[input_json]@"#;
+    
+    match serde_json::from_str::<@[struct_name]@>(input_data) {
+        Ok(data) => println!("Processed data: {:?}", data),
+        Err(e) => eprintln!("Error processing data: {}", e),
+    }
+}
