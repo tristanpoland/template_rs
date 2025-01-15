@@ -1,4 +1,4 @@
-use template_rs::Template;
+use rust_templates::Template;
 
 fn main() {
     // Usage example:

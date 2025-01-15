@@ -1,5 +1,5 @@
 [package]
-name = "template_rs"
+name = "rust_templates"
 version = "0.1.0"
 edition = "2021"
 description = "A template engine for Rust code with inline placeholders"
